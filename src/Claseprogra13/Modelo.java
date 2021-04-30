@@ -10,7 +10,33 @@ package Claseprogra13;
  * @author Aaron
  */
 public class Modelo {
-    public static void main(String[] args) {
-        
+    int nun1;
+    int nun2;
+  
+    public int sumar(){
+        return nun1 + nun2;
     }
+    
+    public int resta(){
+        return nun1 - nun2;
+    }
+
+    public int getNun1() {
+        return nun1;
+    }
+
+    public void setNun1(int nun1) {
+        this.nun1 = nun1;
+    }
+
+    public int getNun2() {
+        return nun2;
+    }
+
+    public void setNun2(int nun2) {
+        this.nun2 = nun2;
+    }
+
+    
+    
 }

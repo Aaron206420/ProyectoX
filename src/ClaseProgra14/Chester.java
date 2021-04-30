@@ -12,10 +12,21 @@ import java.util.Scanner;
  * @author Aaron
  */
 public class Chester {
-    public static void main(String []args){
+
+    public static void main(String[] args) {
         Scanner io;
         
-        PerroBv xp = new PerroBv();
+        int nun = 11;
+
+        String nombre = "Aaron";
+        String apodo = "Aaron420";
+        String alias = "aron";
         
+        String aliass = nombre + apodo + alias;
+        
+        //StringBuiler six = new StringBuiler();
+                
+        PerroBv xp = new PerroBv();
+
     }
 }

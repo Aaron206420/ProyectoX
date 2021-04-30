@@ -19,7 +19,10 @@ public class Cliente {
     private float accountBalance;
 
     private final Pedido[] pedido;
-
+    private int contadorPedidos;
+    private CarritoMotorizadoCompras carrito;
+    
+    
     public Cliente(String custername, String address, String email, String credicCardInfo, String shippingInfo, float accountBalance) {
         this.custername = custername;
         this.address = address;
@@ -28,8 +31,9 @@ public class Cliente {
         this.shippingInfo = shippingInfo;
         this.accountBalance = accountBalance;
 
-        pedido = new Pedido[100];
-        //carrito = new  CarritoMotorizadodeCompras();
+        pedido = new Pedido[694];
+        contadorPedidos=0;
+        carrito = new  CarritoMotorizadoCompras();
 
     }
 
@@ -41,7 +45,10 @@ public class Cliente {
 
     public void updateProfile() {
     }
-
+    public void agregarPedido(Pedido k){
+        this.pedido[contadorPedidos]=k;
+        contadorPedidos++;
+    }
     public String getCustername() {
         return custername;
     }
@@ -88,6 +95,10 @@ public class Cliente {
 
     public void setAccountBalance(float accountBalance) {
         this.accountBalance = accountBalance;
+    }
+
+    public CarritoMotorizadoCompras getCarrito() {
+        return carrito;
     }
 
     
