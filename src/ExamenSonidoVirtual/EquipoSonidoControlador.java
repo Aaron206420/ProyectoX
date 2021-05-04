@@ -12,8 +12,9 @@ import java.util.Scanner;
  * @author Aaron
  */
 public class EquipoSonidoControlador {
+    
     public void iniciar() {
-        String arreglo;
+        
     
     Scanner audio = new Scanner(System.in);
 
