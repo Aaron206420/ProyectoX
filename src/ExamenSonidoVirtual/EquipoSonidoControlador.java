@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class EquipoSonidoControlador {
     public void iniciar() {
-        
+        String arreglo;
     
     Scanner audio = new Scanner(System.in);
 
@@ -29,7 +29,15 @@ public class EquipoSonidoControlador {
         
         int nuny = audio.nextInt();
 
-        
+        switch (nuny) {
+            case 1:
+            System.out.println(" orden del arreglo");
+            arreglo = (String) audio.next();
+
+                
+                
+
+        }
     }
     }
 }

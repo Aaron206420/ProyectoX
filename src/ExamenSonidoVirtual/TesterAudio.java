@@ -10,5 +10,10 @@ package ExamenSonidoVirtual;
  * @author Aaron
  */
 public class TesterAudio {
-    
+    public static void main(String args[]) {
+
+        EquipoSonidoControlador controlador = new EquipoSonidoControlador();
+        controlador.iniciar();
+        
+    }
 }
