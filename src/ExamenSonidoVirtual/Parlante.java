@@ -12,53 +12,25 @@ import java.util.Scanner;
  * @author Aaron
  */
 public class Parlante {
-        String color;
-        String altura;
-        int volumen;
-        boolean habilitar;
-        String pocision;
 
-    public Parlante(){
-        
+    private int volumen;
+    private boolean habilitar;
+    private String direccionSonido;
+
+    public boolean ushabilitar() {
+        return habilitar;
     }
 
-    public Parlante(String color, String altura, int volumen, boolean habilitar, String pocision) {
-        this.color = color;
-        this.altura = altura;
+    public Parlante(int volumen, boolean habilitar, String direccionSonido) {
         this.volumen = volumen;
         this.habilitar = habilitar;
-        this.pocision = pocision;
-    }
-    public Parlante(String color, String altura) {
-        this.color = color;
-        this.altura = altura;
-    }
-    public Parlante( int volumen, boolean habilitar, String pocision) {
-        this.volumen = volumen;
-        this.habilitar = habilitar;
-        this.pocision = pocision;
-    }
-
-    @Override
-    public String toString() {
-        return "Parlante{" + "color=" + color + ", altura=" + altura + ", volumen=" + volumen + ", habilitar=" + habilitar + ", pocision=" + pocision + '}';
+        this.direccionSonido = direccionSonido;
     }
     
     
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getAltura() {
-        return altura;
-    }
-
-    public void setAltura(String altura) {
-        this.altura = altura;
+    
+    public void setHabilitar(boolean habilitar) {
+        this.habilitar = habilitar;
     }
 
     public int getVolumen() {
@@ -69,26 +41,28 @@ public class Parlante {
         this.volumen = volumen;
     }
 
-    public boolean isHabilitar() {
-        return habilitar;
+    public String getDireccionSonido() {
+        return direccionSonido;
     }
 
-    public void setHabilitar(boolean habilitar) {
-        this.habilitar = habilitar;
+    public void setDireccionSonido(String direccionSonido) {
+        this.direccionSonido = direccionSonido;
     }
 
-    public String getPocision() {
-        return pocision;
+    public void subirVolumen() {
+        volumen++;
     }
 
-    public void setPocision(String pocision) {
-        this.pocision = pocision;
+    public void bajarVolumen() {
+        volumen--;
     }
-        
-        
-        
-        
 
-        
-        
+    public void habilitar() {
+        habilitar = true;
+    }
+
+    public void deshabilitar() {
+        habilitar = false;
+    }
+
 }

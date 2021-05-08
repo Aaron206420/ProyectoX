@@ -5,53 +5,66 @@
  */
 package ExamenSonidoVirtual;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Aaron
  */
 public class EquipoSonido {
-   Parlante grave;
-   Parlante derecho;
-   Parlante izquierdo;
-   String[] listaaudio;
-
-   
-   
-    public Parlante getGrave() {
-        return grave;
+    
+    int registros;
+    String[] listaAudio;
+    int cont;
+    
+    //Parlante derecho = new  Parlante(true, 0, "derecho");
+    //Parlante izquierdo = new  Parlante(true, 0, "izqierdo");
+    ParlanteSubwoofer bajos = new ParlanteSubwoofer();
+    
+    
+    public EquipoSonido(){
+        registros = 1000;
+        listaAudio = new String[registros];
+        cont =0;
     }
-
-    public void setGrave(Parlante grave) {
-        this.grave = grave;
+    
+    public void imprimirlistaAudio(){
+        for(String elem: listaAudio){
+            System.out.println(elem);
+        }
     }
-
-    public Parlante getDerecho() {
-        return derecho;
+    public void listaOrdenada(){
+        Arrays.sort(listaAudio);
+        imprimirlistaAudio();
     }
-
-    public void setDerecho(Parlante derecho) {
-        this.derecho = derecho;
+    
+    public void listaCompleta(){
+        
     }
-
-    public Parlante getIzquierdo() {
-        return izquierdo;
+    
+    public void listamusical(){
+        for(int i= 0; i< cont; i++){
+            System.out.println(listaAudio[i]+",");
+        }
     }
-
-    public void setIzquierdo(Parlante izquierdo) {
-        this.izquierdo = izquierdo;
+    
+    public boolean agregarlistaAudio(String nuevoAudio){
+        boolean resultado = false;
+        if(cont< registros){
+            listaAudio[cont]= nuevoAudio;
+            cont++;
+            resultado = true;
+        }
+        return resultado;
     }
-
-    public String[] getListaaudio() {
-        return listaaudio;
+    
+    public boolean eliminarlistaAudio(){
+        boolean resultado = false;
+        if(cont!=0){
+            cont--;
+            listaAudio[cont-1]= null;
+            resultado = true;
+        }
+        return resultado;
     }
-
-    public void setListaaudio(String[] listaaudio) {
-        this.listaaudio = listaaudio;
-    }
-   
-   
-   
-   
-   
-   
 }
