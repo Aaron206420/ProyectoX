@@ -10,60 +10,71 @@ package ExamenExtraordinario;
  * @author Aaron
  */
 public class FabricaVehiculos {
+
     Vehiculo vehiculo[];
     Motor motor[];
     Llanta llanta[];
     int nun;
+
     FabricaVehiculos() {
-        
+
     }
-    
-    public void vehiculosBodega(){
-        for(int i=0; i< 1000; i++){
+
+    public void vehiculosBodega() {
+        for (int i = 0; i < 1000; i++) {
             if (vehiculo[i].equals("") == false) {
-                System.out.println("Vehiculos#"+i+":"+vehiculo[i]);
+                System.out.println("Vehiculos#" + i + ":" + vehiculo[i]);
             }
         }
     }
-   
-    
-    public boolean agregarVehiculo(Vehiculo v){
+
+    public boolean agregarVehiculo(Vehiculo v) {
         boolean resultado = false;
-        if(nun< 10){
-            vehiculo[nun]= v;
+        if (nun < 10) {
+            vehiculo[nun] = v;
             nun++;
             resultado = true;
         }
         return resultado;
     }
-    
-    public boolean agregarMotor(Motor m){
+
+    public boolean agregarMotor(Motor m) {
         boolean resultado = false;
-        if(nun< 10){
-            motor[nun]= m;
+        if (nun < 10) {
+            motor[nun] = m;
             nun++;
             resultado = true;
         }
         return resultado;
     }
-    
-    public boolean agregarLlanta(Llanta l){
+
+    public boolean agregarLlanta(Llanta l) {
         boolean resultado = false;
-        if(nun< 10){
-            llanta[nun]= l;
+        if (nun < 10) {
+            llanta[nun] = l;
             nun++;
             resultado = true;
         }
         return resultado;
     }
-    
-    public void vehiculoVendido(boolean estado){
-        
-        
+
+    public boolean vehiculoVendido( ) {
+        boolean resultado = false;
+        if (nun != 0) {
+            nun--;
+            vehiculo[nun - 1] = null;;
+            resultado = true;
+        }
+        return resultado;
     }
-    
-    public void establecerEstado(Vehiculo v, int estado){
-        
+
+    public void establecerEstado( ) {
+        for(int i=0;i<nun; i++){
+            if(vehiculo[i]!=null)
+            System.out.println(vehiculo[i].getVendido());
+            System.out.println(vehiculo[i].toString());
+        }
+
     }
 
     public FabricaVehiculos(Vehiculo[] vehiculo, Motor[] motor, Llanta[] llanta) {
@@ -71,9 +82,7 @@ public class FabricaVehiculos {
         this.motor = motor;
         this.llanta = llanta;
     }
-    
-    
-    
+
     public Vehiculo[] getVehiculo() {
         return vehiculo;
     }
@@ -97,6 +106,5 @@ public class FabricaVehiculos {
     public void setLlanta(Llanta[] llanta) {
         this.llanta = llanta;
     }
-    
-    
+
 }

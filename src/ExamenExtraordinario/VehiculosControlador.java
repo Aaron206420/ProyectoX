@@ -15,6 +15,10 @@ import java.util.Scanner;
 public class VehiculosControlador {
     FabricaVehiculos fv = new FabricaVehiculos();
     VehiculosVista w = new VehiculosVista(fv);
+    Vehiculo v;
+    Motor m;
+    Llanta l;
+
 
     public void iniciar() {
         while (true) {
@@ -42,12 +46,11 @@ public class VehiculosControlador {
                     break;
                 }
                 case 5:{
-                    fv.vehiculoVendido(v);
-                    
+                    fv.vehiculoVendido();
                     break;
                 }
                 case 6:{
-                    fv.establecerEstado(v, option);
+                    fv.establecerEstado();
                     
                     break;
                 }

@@ -10,6 +10,7 @@ package ExamenExtraordinario;
  * @author Aaron
  */
 public class Vehiculo {
+
     String color;
     String marca;
     String modelo;
@@ -19,7 +20,17 @@ public class Vehiculo {
     Llanta llanta2;
     Llanta llanta3;
     Llanta llanta4;
+    String vendido;
 
+    public String getVendido() {
+        return vendido;
+    }
+
+    public void setVendido(String vendido) {
+        this.vendido = vendido;
+    }
+
+    
     public Vehiculo(String color, String marca, String modelo, int age) {
         this.color = color;
         this.marca = marca;
@@ -27,8 +38,12 @@ public class Vehiculo {
         this.age = age;
     }
 
+    public boolean vendido(boolean vendido) {
+        return false;
+    }
+
     Vehiculo() {
-        
+
     }
 
     public String getColor() {
@@ -55,7 +70,6 @@ public class Vehiculo {
         this.modelo = modelo;
     }
 
-    
     public Vehiculo(Motor motor, Llanta llanta1, Llanta llanta2, Llanta llanta3, Llanta llanta4) {
         this.motor = motor;
         this.llanta1 = llanta1;
@@ -111,6 +125,5 @@ public class Vehiculo {
     public void setLlanta4(Llanta llanta4) {
         this.llanta4 = llanta4;
     }
-    
-    
+
 }
