@@ -27,6 +27,10 @@ public class Vehiculo {
         this.age = age;
     }
 
+    Vehiculo() {
+        
+    }
+
     public String getColor() {
         return color;
     }
