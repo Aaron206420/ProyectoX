@@ -13,7 +13,7 @@ public class FabricaVehiculos {
     Vehiculo vehiculo[];
     Motor motor[];
     Llanta llanta[];
-
+    int nun;
     FabricaVehiculos() {
         
     }
@@ -25,25 +25,44 @@ public class FabricaVehiculos {
             }
         }
     }
+   
     
-    public Vehiculo agregarVehiculo(Vehiculo v){
+    public boolean agregarVehiculo(Vehiculo v){
+        boolean resultado = false;
+        if(nun< 10){
+            vehiculo[nun]= v;
+            nun++;
+            resultado = true;
+        }
+        return resultado;
+    }
+    
+    public boolean agregarMotor(Motor m){
+        boolean resultado = false;
+        if(nun< 10){
+            motor[nun]= m;
+            nun++;
+            resultado = true;
+        }
+        return resultado;
+    }
+    
+    public boolean agregarLlanta(Llanta l){
+        boolean resultado = false;
+        if(nun< 10){
+            llanta[nun]= l;
+            nun++;
+            resultado = true;
+        }
+        return resultado;
+    }
+    
+    public void vehiculoVendido(boolean estado){
         
-        return v;
+        
     }
     
-    public Motor agregarMotor(Motor m){
-        return m;
-    }
-    
-    public Llanta agregarLlanta(Llanta l){
-        return l;
-    }
-    
-    public Vehiculo vehiculoVendido(Vehiculo v){
-        return v;
-    }
-    
-    public Vehiculo establecerEstado(Vehiculo v, int estado){
+    public void establecerEstado(Vehiculo v, int estado){
         
     }
 
