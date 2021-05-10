@@ -60,7 +60,7 @@ public class VehiculosVista {
 
     }
     
-    void soliciteDatosExamen(FabricaVehiculos six) {
+    void soliciteDatosVehiculo(FabricaVehiculos six) {
         String estadoVehiculo = "";
         if (analisis) {
             estadoVehiculo = JOptionPane.showInputDialog(null, "Digite la marca de carro");
