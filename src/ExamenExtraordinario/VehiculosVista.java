@@ -6,32 +6,50 @@
 package ExamenExtraordinario;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Aaron
  */
 public class VehiculosVista {
-
+    boolean analisis = true;
     VehiculosVista(FabricaVehiculos fv) {
         
     }
     
-    public int mostrarMenuVehiculo() {
-        Scanner s = new Scanner(System.in);
-        System.out.println("Menu del pidido\n Color del Vehiculo \n Marca del Vehiculo"
-                + "\nModelo del Vehiculo \nAño de Frafricación \n Salir");
-        int menu = s.nextInt();
-        
-        return menu;
-    }
-    
     public int mostrarMenu() {
         Scanner s = new Scanner(System.in);
-        System.out.println("Menu\n Lista de Vehiculos en Bodega \n Lista de Vehiculos Vendidos"
-                + "\nLista de Vehiculos Devueltos \nAgregar Vehiculo" + "\n Establecer Estado del Vehiculo \n Salir");
-        int menu = s.nextInt();
-        
-        return menu;
+        String msj = "Menu\n Lista de Vehiculos en Bodega \n Lista de Vehiculos Vendidos"
+                + "\nLista de Vehiculos Devueltos \nAgregar Vehiculo" + "\n Establecer Estado del Vehiculo \n Salir";
+
+        int opcionAceptada;
+        if (analisis) {
+            opcionAceptada = Integer.parseInt(JOptionPane.showInputDialog(null, msj));
+        } else {
+            System.out.println(msj);
+        }
+
+        opcionAceptada = s.nextInt();
+
+        return opcionAceptada;
+    }
+    
+    public int mostrarMenuVehiculo() {
+        Scanner s = new Scanner(System.in);
+        String msj =  "Menu del pidido\n Color del Vehiculo \n Marca del Vehiculo"
+                + "\nModelo del Vehiculo \nAño de Frafricación \n Salir";
+
+        int opcionAceptada;
+        if (analisis) {
+            opcionAceptada = Integer.parseInt(JOptionPane.showInputDialog(null, msj));
+        } else {
+            System.out.println(msj);
+        }
+
+        opcionAceptada = s.nextInt();
+
+        return opcionAceptada;
     }
 }
+       
