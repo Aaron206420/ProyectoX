@@ -64,8 +64,7 @@ public class VehiculosVista {
         String estadoVehiculo = "";
         if (analisis) {
             estadoVehiculo = JOptionPane.showInputDialog(null, "Digite la nota del examen");
-            Vehiculo[] vehiculo = null;
-            six.setVehiculo(vehiculo);
+            
         }
         else{
             Scanner cb = new Scanner(System.in);
