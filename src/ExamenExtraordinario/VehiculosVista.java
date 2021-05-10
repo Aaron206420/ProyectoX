@@ -51,5 +51,28 @@ public class VehiculosVista {
 
         return opcionAceptada;
     }
+    public void mostrarmensaje(String ms) {
+        if (analisis) 
+            JOptionPane.showMessageDialog(null, ms);
+        else 
+            System.out.println(ms);
+        
+
+    }
+    
+    void soliciteDatosExamen(FabricaVehiculos six) {
+        String estadoVehiculo = "";
+        if (analisis) {
+            estadoVehiculo = JOptionPane.showInputDialog(null, "Digite la nota del examen");
+            Vehiculo[] vehiculo = null;
+            six.setVehiculo(vehiculo);
+        }
+        else{
+            Scanner cb = new Scanner(System.in);
+            System.out.println("Estado de Vehiculos");
+            cb.nextInt();
+           
+        }
+    }
 }
        

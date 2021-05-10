@@ -15,9 +15,7 @@ import java.util.Scanner;
 public class VehiculosControlador {
     FabricaVehiculos fv = new FabricaVehiculos();
     VehiculosVista w = new VehiculosVista(fv);
-    Vehiculo v;
-    Motor m;
-    Llanta l;
+    
 
 
     public void iniciar() {
@@ -31,17 +29,17 @@ public class VehiculosControlador {
                     break;
                 }
                 case 2:{
-                    fv.agregarVehiculo(v);
+                    fv.agregarVehiculo();
                     
                     break;
                 }
                 case 3:{
-                    fv.agregarMotor(m);
+                    fv.agregarMotor();
                     
                     break;
                 }
                 case 4:{
-                    fv.agregarLlanta(l);
+                    fv.agregarLlanta();
                     
                     break;
                 }

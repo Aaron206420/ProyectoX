@@ -28,7 +28,8 @@ public class FabricaVehiculos {
         }
     }
 
-    public boolean agregarVehiculo(Vehiculo v) {
+    public boolean agregarVehiculo( ) {
+        Vehiculo v = null;
         boolean resultado = false;
         if (nun < 10) {
             vehiculo[nun] = v;
@@ -38,7 +39,8 @@ public class FabricaVehiculos {
         return resultado;
     }
 
-    public boolean agregarMotor(Motor m) {
+    public boolean agregarMotor( ) {
+        Motor m = null;
         boolean resultado = false;
         if (nun < 10) {
             motor[nun] = m;
@@ -48,7 +50,8 @@ public class FabricaVehiculos {
         return resultado;
     }
 
-    public boolean agregarLlanta(Llanta l) {
+    public boolean agregarLlanta() {
+        Llanta l = null;
         boolean resultado = false;
         if (nun < 10) {
             llanta[nun] = l;
