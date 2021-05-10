@@ -24,7 +24,13 @@ public class VehiculosControlador {
             int option = w.mostrarMenu();
             
             switch (option) {
-                case 1:{
+                case 0:{
+                    
+                    Vehiculo v = new Vehiculo();
+                    w.soliciteDatosVehiculo(fv);
+                    fv.agregarvehiculo(v);
+                }
+                case 1:{    
                     fv.vehiculosBodega();
                     break;
                 }

@@ -15,11 +15,21 @@ public class FabricaVehiculos {
     Motor motor[];
     Llanta llanta[];
     int nun;
+    
 
     FabricaVehiculos() {
 
     }
-
+    public boolean agregarvehiculo(Vehiculo v){
+        boolean resultado = false;
+        if(nun< 1000){
+            vehiculo[nun]= v;
+            nun++;
+            resultado=true;
+        }
+        return resultado;
+    }
+    
     public void vehiculosBodega() {
         for (int i = 0; i < 1000; i++) {
             if (vehiculo[i].equals("") == false) {
