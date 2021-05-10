@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Aaron
+ * @author Aaronxd
  */
 public class VehiculosVista {
     boolean analisis = true;
