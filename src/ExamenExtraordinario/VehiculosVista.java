@@ -63,7 +63,7 @@ public class VehiculosVista {
     void soliciteDatosExamen(FabricaVehiculos six) {
         String estadoVehiculo = "";
         if (analisis) {
-            estadoVehiculo = JOptionPane.showInputDialog(null, "Digite la nota del examen");
+            estadoVehiculo = JOptionPane.showInputDialog(null, "Digite la marca de carro");
             
         }
         else{
