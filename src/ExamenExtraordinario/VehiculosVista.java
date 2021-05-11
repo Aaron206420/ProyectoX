@@ -27,7 +27,7 @@ public class VehiculosVista {
         String motor = JOptionPane.showInputDialog("Digite especificaciones del motor: ");
         String color = JOptionPane.showInputDialog("Digite el color del automovil: ");
         String marca = JOptionPane.showInputDialog("Digite la marca del automovil: ");
-        String estado = JOptionPane.showInputDialog("Digite el estado de venta del vehiculo ");
+        String estado = JOptionPane.showInputDialog("Digite el año de venta del vehiculo ");
 
         vl.setModelo(modelo);
         vl.setMarca(marca);
@@ -37,24 +37,47 @@ public class VehiculosVista {
     public void agregarMotor(Motor motor) {
         float peso=Float.parseFloat(JOptionPane.showInputDialog("digite el peso"));
         String Motor = JOptionPane.showInputDialog("Digite el tipo de motor: ");
-        String caracteristicas = JOptionPane.showInputDialog("Digite las caracteristicas del motor: ");
-        String estado = JOptionPane.showInputDialog("Digite el estado de venta del motor: ");
         String nunserie = JOptionPane.showInputDialog("Digite el numero de serie del motor: ");
 
         motor.setMarca(Motor);
         motor.setPeso(peso);
-        motor.setEstado(estado);
         motor.setNunserie(nunserie);
     }
-    public void agregarLlanta(Llanta llanta) {
+    public void agregarLlanta1(Llanta llanta1) {
         int tamaño=Integer.parseInt(JOptionPane.showInputDialog("digite el tamaño de las llantas: "));
-        String nunSerie = JOptionPane.showInputDialog("Digite el numero de serie de las llantas: ");
         String marca = JOptionPane.showInputDialog("Digite la marca de las llantas: ");
-        String estado = JOptionPane.showInputDialog("Digite el estado de las llantas: ");
+        String modelo = JOptionPane.showInputDialog("Digite el modelo de las llantas: ");
 
-        llanta.setMarca(marca);
-        llanta.setModelo(estado);
-        llanta.setAltura(tamaño);
+        llanta1.setMarca(marca);
+        llanta1.setModelo(modelo);
+        llanta1.setAltura(tamaño);
+	}
+    public void agregarLlanta2(Llanta llanta2) {
+        int tamaño=Integer.parseInt(JOptionPane.showInputDialog("digite el tamaño de las llantas: "));
+        String marca = JOptionPane.showInputDialog("Digite la marca de las llantas: ");
+        String modelo = JOptionPane.showInputDialog("Digite el modelo de las llantas: ");
+
+        llanta2.setMarca(marca);
+        llanta2.setModelo(modelo);
+        llanta2.setAltura(tamaño);
+	}
+    public void agregarLlanta3(Llanta llanta3) {
+        int tamaño=Integer.parseInt(JOptionPane.showInputDialog("digite el tamaño de las llantas: "));
+        String marca = JOptionPane.showInputDialog("Digite la marca de las llantas: ");
+        String modelo = JOptionPane.showInputDialog("Digite el modelo de las llantas: ");
+
+        llanta3.setMarca(marca);
+        llanta3.setModelo(modelo);
+        llanta3.setAltura(tamaño);
+	}
+    public void agregarLlanta4(Llanta llanta4) {
+        int tamaño=Integer.parseInt(JOptionPane.showInputDialog("digite el tamaño de las llantas: "));
+        String marca = JOptionPane.showInputDialog("Digite la marca de las llantas: ");
+        String modelo = JOptionPane.showInputDialog("Digite el modelo de las llantas: ");
+
+        llanta4.setMarca(marca);
+        llanta4.setModelo(modelo);
+        llanta4.setAltura(tamaño);
 	}
     public void imprimirAviso(String Reporte) {
         JOptionPane.showMessageDialog(null, Reporte);

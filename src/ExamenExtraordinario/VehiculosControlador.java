@@ -33,16 +33,28 @@ public class VehiculosControlador {
                     fv.agregarMotor(motor);
                     break;
                 case 3:
-                    w.agregarLlanta(llantas);
+                    w.agregarLlanta1(llantas);
                     fv.agregarLlanta(llantas);
                     break;
                 case 4:
-                    aviso.imprimirListaVehiculos();
+                    w.agregarLlanta2(llantas);
+                    fv.agregarLlanta(llantas);
                     break;
                 case 5:
-                    aviso.imprimirListaMotor();
+                    w.agregarLlanta3(llantas);
+                    fv.agregarLlanta(llantas);
                     break;
                 case 6:
+                    w.agregarLlanta4(llantas);
+                    fv.agregarLlanta(llantas);
+                    break;    
+                case 7:
+                    aviso.imprimirListaVehiculos();
+                    break;
+                case 8:
+                    aviso.imprimirListaMotor();
+                    break;
+                case 9:
                     aviso.imprimirListaLlantas();
                     break;
             }
