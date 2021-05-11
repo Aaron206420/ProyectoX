@@ -5,7 +5,6 @@
  */
 package ExamenExtraordinario;
 
-
 import java.util.Scanner;
 
 /**
@@ -13,52 +12,42 @@ import java.util.Scanner;
  * @author Aaron
  */
 public class VehiculosControlador {
+
     FabricaVehiculos fv = new FabricaVehiculos();
     VehiculosVista w = new VehiculosVista(fv);
-    
-
+    Aviso aviso = new Aviso(w, fv);
 
     public void iniciar() {
         while (true) {
-
-            int option = w.mostrarMenu();
-            
-            switch (option) {
-                case 0:{
-                    
-                    Vehiculo v = new Vehiculo();
-                    w.soliciteDatosVehiculo(fv);
-                    fv.agregarvehiculo(v);
-                }
-                case 1:{    
-                    fv.vehiculosBodega();
+            int menu = w.menu();
+            Llanta llantas = new Llanta();
+            Motor motor = new Motor();
+            Vehiculo vehiculo = new Vehiculo(llantas, motor);
+            switch (menu) {
+                case 1:
+                    w.agregarVehiculo(vehiculo);
+                    fv.agregarVehiculo(vehiculo);
                     break;
-                }
-                case 2:{
-                    fv.agregarVehiculo();
-                    
+                case 2:
+                    w.agregarMotor(motor);
+                    fv.agregarMotor(motor);
                     break;
-                }
-                case 3:{
-                    fv.agregarMotor();
-                    
+                case 3:
+                    w.agregarLlanta(llantas);
+                    fv.agregarLlanta(llantas);
                     break;
-                }
-                case 4:{
-                    fv.agregarLlanta();
-                    
+                case 4:
+                    aviso.imprimirListaVehiculos();
                     break;
-                }
-                case 5:{
-                    fv.vehiculoVendido();
+                case 5:
+                    aviso.imprimirListaMotor();
                     break;
-                }
-                case 6:{
-                    fv.establecerEstado();
-                    
+                case 6:
+                    aviso.imprimirListaLlantas();
                     break;
-                }
-                   
+            }
+            if (menu == 7) {
+                break;
             }
         }
     }

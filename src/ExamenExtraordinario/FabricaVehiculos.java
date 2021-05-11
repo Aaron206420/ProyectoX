@@ -11,89 +11,17 @@ package ExamenExtraordinario;
  */
 public class FabricaVehiculos {
 
-    Vehiculo vehiculo[];
-    Motor motor[];
-    Llanta llanta[];
+    Vehiculo[] vehiculo;
+    Motor[] motor;
+    Llanta[] llanta;
     int nun;
-    
+    int nuny;
+    int nunny;
 
-    FabricaVehiculos() {
-
-    }
-    public boolean agregarvehiculo(Vehiculo v){
-        boolean resultado = false;
-        if(nun< 1000){
-            vehiculo[nun]= v;
-            nun++;
-            resultado=true;
-        }
-        return resultado;
-    }
-    
-    public void vehiculosBodega() {
-        for (int i = 0; i < 1000; i++) {
-            if (vehiculo[i].equals("") == false) {
-                System.out.println("Vehiculos#" + i + ":" + vehiculo[i]);
-            }
-        }
-    }
-
-    public boolean agregarVehiculo( ) {
-        Vehiculo v = null;
-        boolean resultado = false;
-        if (nun < 10) {
-            vehiculo[nun] = v;
-            nun++;
-            resultado = true;
-        }
-        return resultado;
-    }
-
-    public boolean agregarMotor( ) {
-        Motor m = null;
-        boolean resultado = false;
-        if (nun < 10) {
-            motor[nun] = m;
-            nun++;
-            resultado = true;
-        }
-        return resultado;
-    }
-
-    public boolean agregarLlanta() {
-        Llanta l = null;
-        boolean resultado = false;
-        if (nun < 10) {
-            llanta[nun] = l;
-            nun++;
-            resultado = true;
-        }
-        return resultado;
-    }
-
-    public boolean vehiculoVendido( ) {
-        boolean resultado = false;
-        if (nun != 0) {
-            nun--;
-            vehiculo[nun - 1] = null;;
-            resultado = true;
-        }
-        return resultado;
-    }
-
-    public void establecerEstado( ) {
-        for(int i=0;i<nun; i++){
-            if(vehiculo[i]!=null)
-            System.out.println(vehiculo[i].getVendido());
-            System.out.println(vehiculo[i].toString());
-        }
-
-    }
-
-    public FabricaVehiculos(Vehiculo[] vehiculo, Motor[] motor, Llanta[] llanta) {
-        this.vehiculo = vehiculo;
-        this.motor = motor;
-        this.llanta = llanta;
+    public FabricaVehiculos() {
+        nun = 0;
+        nuny = 0;
+        nunny = 0;
     }
 
     public Vehiculo[] getVehiculo() {
@@ -108,16 +36,46 @@ public class FabricaVehiculos {
         return motor;
     }
 
-    public void setMotor(Motor[] motor) {
-        this.motor = motor;
-    }
-
     public Llanta[] getLlanta() {
         return llanta;
     }
 
     public void setLlanta(Llanta[] llanta) {
         this.llanta = llanta;
+    }
+
+    public void setPartes(Motor[] motor) {
+        this.motor = motor;
+    }
+
+    public boolean agregarVehiculo(Vehiculo v) {
+        boolean resultado = false;
+        if (nun < 1000) {
+            vehiculo[nun] = v;
+            nun++;
+            resultado = true;
+        }
+        return resultado;
+    }
+        public boolean agregarMotor(Motor m) {
+        boolean resultado = false;
+        if (nuny < 1000) {
+            motor[nuny] = m;
+            nuny++;
+            resultado = true;
+        }
+        return resultado;
+    }
+    
+    
+    public boolean agregarLlanta(Llanta l) {
+        boolean resultado = false;
+        if (nunny < 1000) {
+            llanta[nunny] = l;
+            nunny++;
+            resultado = true;
+        }
+        return resultado;
     }
 
 }

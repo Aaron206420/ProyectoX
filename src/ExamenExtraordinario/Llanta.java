@@ -14,11 +14,9 @@ public class Llanta {
     String marca;
     String modelo;
 
-    public Llanta(int altura, String marca, String modelo) {
-        this.altura = altura;
-        this.marca = marca;
-        this.modelo = modelo;
-    }
+    public Llanta(){
+    
+}
 
     public int getAltura() {
         return altura;
@@ -42,6 +40,11 @@ public class Llanta {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    @Override
+    public String toString() {
+        return "Llanta{" + "altura=" + altura + ", marca=" + marca + ", modelo=" + modelo + '}';
     }
     
     

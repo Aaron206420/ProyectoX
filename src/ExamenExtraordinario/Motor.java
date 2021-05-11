@@ -13,12 +13,18 @@ public class Motor {
     float peso;
     String marca;
     String nunserie;
+    String estado;
 
-    public Motor(float peso, String marca, String nunserie) {
-        this.peso = peso;
-        this.marca = marca;
-        this.nunserie = nunserie;
+    public String getEstado() {
+        return estado;
     }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+    
+
+   
 
     public float getPeso() {
         return peso;
@@ -42,6 +48,12 @@ public class Motor {
 
     public void setNunserie(String nunserie) {
         this.nunserie = nunserie;
+    }
+
+   
+    @Override
+    public String toString() {
+        return "Motor{" + "peso=" + peso + ", marca=" + marca + ", nunserie=" + nunserie + '}';
     }
     
     

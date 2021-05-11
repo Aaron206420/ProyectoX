@@ -13,65 +13,50 @@ import javax.swing.JOptionPane;
  * @author Aaronxd
  */
 public class VehiculosVista {
-    boolean analisis = true;
-    VehiculosVista(FabricaVehiculos fv) {
-        
+    public FabricaVehiculos agencia;
+    public VehiculosVista(FabricaVehiculos agencia) {
+        this.agencia = agencia;
     }
-    
-    public int mostrarMenu() {
-        Scanner s = new Scanner(System.in);
-        String msj = "Menu\n Lista de Vehiculos en Bodega \n Lista de Vehiculos Vendidos"
-                + "\nLista de Vehiculos Devueltos \nAgregar Vehiculo" + "\n Establecer Estado del Vehiculo \n Salir";
-
-        int opcionAceptada;
-        if (analisis) {
-            opcionAceptada = Integer.parseInt(JOptionPane.showInputDialog(null, msj));
-        } else {
-            System.out.println(msj);
-        }
-
-        opcionAceptada = s.nextInt();
-
-        return opcionAceptada;
+    public int menu() {
+        int menu = Integer.parseInt(JOptionPane.showInputDialog("1.Agregar Vehiculo\n2.Agregar motor\n3.Agregar llantas" 
+                + "\n4.Mostrar Lista Vehiculos\n5.Mostrar lista de llantas \n6.Mostrar motor\n7.salir"));
+        return menu;
     }
-    
-    public int mostrarMenuVehiculo() {
-        Scanner s = new Scanner(System.in);
-        String msj =  "Menu del pidido\n Color del Vehiculo \n Marca del Vehiculo"
-                + "\nModelo del Vehiculo \nAño de Frafricación \n Salir";
+    public void agregarVehiculo(Vehiculo vl) {
+        String modelo = JOptionPane.showInputDialog("Digite el modelo del automovil: ");
+        String motor = JOptionPane.showInputDialog("Digite especificaciones del motor: ");
+        String color = JOptionPane.showInputDialog("Digite el color del automovil: ");
+        String marca = JOptionPane.showInputDialog("Digite la marca del automovil: ");
+        String estado = JOptionPane.showInputDialog("Digite el estado de venta del vehiculo ");
 
-        int opcionAceptada;
-        if (analisis) {
-            opcionAceptada = Integer.parseInt(JOptionPane.showInputDialog(null, msj));
-        } else {
-            System.out.println(msj);
-        }
-
-        opcionAceptada = s.nextInt();
-
-        return opcionAceptada;
+        vl.setModelo(modelo);
+        vl.setMarca(marca);
+        vl.setColor(color);
+        vl.setEstado(estado);
     }
-    public void mostrarmensaje(String ms) {
-        if (analisis) 
-            JOptionPane.showMessageDialog(null, ms);
-        else 
-            System.out.println(ms);
-        
+    public void agregarMotor(Motor motor) {
+        float peso=Float.parseFloat(JOptionPane.showInputDialog("digite el peso"));
+        String Motor = JOptionPane.showInputDialog("Digite el tipo de motor: ");
+        String caracteristicas = JOptionPane.showInputDialog("Digite las caracteristicas del motor: ");
+        String estado = JOptionPane.showInputDialog("Digite el estado de venta del motor: ");
+        String nunserie = JOptionPane.showInputDialog("Digite el numero de serie del motor: ");
 
+        motor.setMarca(Motor);
+        motor.setPeso(peso);
+        motor.setEstado(estado);
+        motor.setNunserie(nunserie);
     }
-    
-    void soliciteDatosVehiculo(FabricaVehiculos six) {
-        String estadoVehiculo = "";
-        if (analisis) {
-            estadoVehiculo = JOptionPane.showInputDialog(null, "Digite la marca de carro");
-            
-        }
-        else{
-            Scanner cb = new Scanner(System.in);
-            System.out.println("Estado de Vehiculos");
-            cb.nextInt();
-           
-        }
-    }
+    public void agregarLlanta(Llanta llanta) {
+        int tamaño=Integer.parseInt(JOptionPane.showInputDialog("digite el tamaño de las llantas: "));
+        String nunSerie = JOptionPane.showInputDialog("Digite el numero de serie de las llantas: ");
+        String marca = JOptionPane.showInputDialog("Digite la marca de las llantas: ");
+        String estado = JOptionPane.showInputDialog("Digite el estado de las llantas: ");
+
+        llanta.setMarca(marca);
+        llanta.setModelo(estado);
+        llanta.setAltura(tamaño);
+	}
+    public void imprimirAviso(String Reporte) {
+        JOptionPane.showMessageDialog(null, Reporte);
+	}
 }
-       
