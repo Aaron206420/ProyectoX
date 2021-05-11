@@ -18,8 +18,8 @@ public class VehiculosVista {
         this.agencia = agencia;
     }
     public int menu() {
-        int menu = Integer.parseInt(JOptionPane.showInputDialog("1.Agregar Vehiculo\n2.Agregar motor\n3.Agregar llantas" 
-                + "\n4.Mostrar Lista Vehiculos\n5.Mostrar lista de llantas \n6.Mostrar motor\n7.salir"));
+        int menu = Integer.parseInt(JOptionPane.showInputDialog("1.Agregar Vehiculo\n2.Agregar motor\n3.Agregar llanta1" +"\n4.Agregar llanta2 \n5.Agregar llanta3 \n6.Agregar llanta4"
+                + "\n7.Mostrar Lista Vehiculos\n8.Mostrar lista de llantas \n9.Mostrar motor\n10.salir"));
         return menu;
     }
     public void agregarVehiculo(Vehiculo vl) {
