@@ -19,12 +19,12 @@ public class VehiculosVista {
     }
     public int menu() {
         int menu = Integer.parseInt(JOptionPane.showInputDialog("1.Agregar Vehiculo\n2.Agregar motor\n3.Agregar llanta1" +"\n4.Agregar llanta2 \n5.Agregar llanta3 \n6.Agregar llanta4"
-                + "\n7.Mostrar Lista Vehiculos\n8.Mostrar lista de llantas \n9.Mostrar motor\n10.salir"));
+                + "\n7.Mostrar Lista Vehiculos\n8.Mostrar lista de llanta1\n9.Mostrar lista de llanta2"
+                +"\n10.Mostrar lista de llanta3\n11.Mostrar lista de llanta4\n12.Mostrar motor\n13.salir"));
         return menu;
     }
     public void agregarVehiculo(Vehiculo vl) {
         String modelo = JOptionPane.showInputDialog("Digite el modelo del automovil: ");
-        String motor = JOptionPane.showInputDialog("Digite especificaciones del motor: ");
         String color = JOptionPane.showInputDialog("Digite el color del automovil: ");
         String marca = JOptionPane.showInputDialog("Digite la marca del automovil: ");
         String estado = JOptionPane.showInputDialog("Digite el año de venta del vehiculo ");
@@ -36,7 +36,7 @@ public class VehiculosVista {
     }
     public void agregarMotor(Motor motor) {
         float peso=Float.parseFloat(JOptionPane.showInputDialog("digite el peso"));
-        String Motor = JOptionPane.showInputDialog("Digite el tipo de motor: ");
+        String Motor = JOptionPane.showInputDialog("Digite la marca del motor: ");
         String nunserie = JOptionPane.showInputDialog("Digite el numero de serie del motor: ");
 
         motor.setMarca(Motor);

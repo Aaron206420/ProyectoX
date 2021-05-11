@@ -55,10 +55,19 @@ public class VehiculosControlador {
                     aviso.imprimirListaMotor();
                     break;
                 case 9:
-                    aviso.imprimirListaLlantas();
+                    aviso.imprimirListaLlanta1();
                     break;
+                case 10:
+                    aviso.imprimirListaLlanta2();
+                    break;
+                case 11:
+                    aviso.imprimirListaLlanta3();
+                    break;
+                case 12:
+                    aviso.imprimirListaLlanta4();
+                    break;    
             }
-            if (menu == 7) {
+            if (menu == 12) {
                 break;
             }
         }

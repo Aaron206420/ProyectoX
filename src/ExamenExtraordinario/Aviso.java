@@ -25,14 +25,38 @@ public class Aviso {
         }
        w.imprimirAviso(ListaVehiculos);
     }
-    public void imprimirListaLlantas(){
-        String ListaLlantas = "";
+    public void imprimirListaLlanta1(){
+        String ListaLlanta1 = "";
         for(int i = 0; i < fv.nuny; i++){
-          ListaLlantas += "El inventario de vehiculos: ";
-          ListaLlantas += fv.getVehiculo()[i].toString();
+          ListaLlanta1 += "El inventario de vehiculos: ";
+          ListaLlanta1 += fv.getVehiculo()[i].toString();
         }
-       w.imprimirAviso(ListaLlantas);
-}
+       w.imprimirAviso(ListaLlanta1);
+    }
+    public void imprimirListaLlanta2(){
+        String ListaLlanta2 = "";
+        for(int i = 0; i < fv.nuny; i++){
+          ListaLlanta2 += "El inventario de vehiculos: ";
+          ListaLlanta2 += fv.getVehiculo()[i].toString();
+        }
+       w.imprimirAviso(ListaLlanta2);
+    }
+    public void imprimirListaLlanta3(){
+        String ListaLlanta3 = "";
+        for(int i = 0; i < fv.nuny; i++){
+          ListaLlanta3 += "El inventario de vehiculos: ";
+          ListaLlanta3 += fv.getVehiculo()[i].toString();
+        }
+       w.imprimirAviso(ListaLlanta3);
+    }
+    public void imprimirListaLlanta4(){
+        String ListaLlanta4 = "";
+        for(int i = 0; i < fv.nuny; i++){
+          ListaLlanta4 += "El inventario de vehiculos: ";
+          ListaLlanta4 += fv.getVehiculo()[i].toString();
+        }
+       w.imprimirAviso(ListaLlanta4);
+    }
     public void imprimirListaMotor(){
         String ListaMotor = "";
         for(int i = 0; i < fv.nunny; i++){

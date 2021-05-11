@@ -14,11 +14,14 @@ public class FabricaVehiculos {
     Vehiculo[] vehiculo;
     Motor[] motor;
     Llanta[] llanta;
+    int max;
     int nun;
     int nuny;
     int nunny;
 
     public FabricaVehiculos() {
+        max = 1000;
+        vehiculo = new Vehiculo[max];
         nun = 0;
         nuny = 0;
         nunny = 0;
@@ -50,7 +53,7 @@ public class FabricaVehiculos {
 
     public boolean agregarVehiculo(Vehiculo v) {
         boolean resultado = false;
-        if (nun < 1000) {
+        if (nun < max) {
             vehiculo[nun] = v;
             nun++;
             resultado = true;
@@ -59,7 +62,7 @@ public class FabricaVehiculos {
     }
         public boolean agregarMotor(Motor m) {
         boolean resultado = false;
-        if (nuny < 1000) {
+        if (nuny < max) {
             motor[nuny] = m;
             nuny++;
             resultado = true;
@@ -70,7 +73,7 @@ public class FabricaVehiculos {
     
     public boolean agregarLlanta(Llanta l) {
         boolean resultado = false;
-        if (nunny < 1000) {
+        if (nunny < max) {
             llanta[nunny] = l;
             nunny++;
             resultado = true;
